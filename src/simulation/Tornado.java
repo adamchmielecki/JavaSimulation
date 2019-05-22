@@ -1,8 +1,9 @@
 package simulation;
 
-public class Tornado implements IGoldReduction {
+public class Tornado implements IReduction {
+
     @Override
-    public void reduceGoldOnField() {
+    public void reduce() {
 
     }
 }

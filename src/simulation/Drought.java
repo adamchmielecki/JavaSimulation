@@ -1,15 +1,10 @@
 package simulation;
 
-public class Drought implements IGoldReduction,IPopulationReduction {
-
+public class Drought implements IReduction {
 
     @Override
-    public void reduceGoldOnField() {
+    public void reduce() {
 
     }
 
-    @Override
-    public void reducePopulationOnField() {
-
-    }
 }

@@ -1,8 +1,9 @@
 package simulation;
 
-public class Plague implements IPopulationReduction {
+public class Plague implements IReduction {
+
     @Override
-    public void reducePopulationOnField() {
+    public void reduce() {
 
     }
 }

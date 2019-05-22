@@ -17,6 +17,13 @@ public class Country {
         this.generator = generator;
     }
 
+    void attack() {
+
+    }
+
+    void defend() {
+
+    }
 
     public int getCountryID() {
         return countryID;
