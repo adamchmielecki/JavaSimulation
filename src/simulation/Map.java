@@ -36,7 +36,7 @@ public class Map {
 
         }
     }
-    private void generateSilver(int max, int min){
+    private void generatePopulation(int max, int min){
         for(int i = 0; i<data.getSize(); i++){
             for(int j = 0; j<data.getSize(); j++) {
                 field[i][j]=new Field();
@@ -54,7 +54,7 @@ public class Map {
 
     public void generateResources(int max, int min){
       generateGold(max,min);
-      generateSilver(max,min);
+      generatePopulation(max,min);
 
 
     }
