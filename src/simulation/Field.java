@@ -3,6 +3,15 @@ package simulation;
 public class Field extends Resources{
 
     int ownerID;
+    int fieldID;
+
+    public int getFieldID() {
+        return fieldID;
+    }
+
+    public void setFieldID(int fieldID) {
+        this.fieldID = fieldID;
+    }
 
     public int getOwnerID() {
         return ownerID;

@@ -1,21 +1,74 @@
 package simulation;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+import java.util.Stack;
 
 public class Country {
 
     private int countryID;
-    private ArrayList<Field> territory;
+
+
+
+    public int getTotalPopulation() {
+        return totalPopulation;
+    }
+
+    public void setTotalPopulation(int totalPopulation) {
+        this.totalPopulation = totalPopulation;
+    }
+
+    public int getTotalGold() {
+        return totalGold;
+    }
+
+    public void setTotalGold(int totalGold) {
+        this.totalGold = totalGold;
+    }
+
+    private int totalGold;
+    private int totalPopulation;
+
+
+    private Stack<Field> territory;
     Army army;
     Random generator;
 
     public Country(int countryID, Army army) {
-        territory = new ArrayList<>();
+        territory = new Stack<>();
         this.countryID = countryID;
         this.army = army;
         this.generator = generator;
+
+        totalGold=0;
+        totalPopulation=0;
+
+
     }
+
+    void summingCountryGold(Field field){
+
+        this.getTerritory().add(field);
+        totalGold+=field.getGold();
+        field.setOwnerID(this.getCountryID());
+        System.out.println(totalGold);
+
+    }
+
+    void summmingCountryPopuation(Field field){
+
+        this.getTerritory().add(field);
+        totalPopulation+=field.getPopulation();
+        field.setOwnerID(this.getCountryID());
+        System.out.println(totalPopulation);
+        //return  totalGold;
+    }
+
+
+
+
+
 
     void attack() {
 
@@ -49,11 +102,11 @@ public class Country {
         this.generator = generator;
     }
 
-    public ArrayList<Field> getTerritory() {
+    public Stack<Field> getTerritory() {
         return territory;
     }
 
-    public void setTerritory(ArrayList<Field> territory) {
+    public void setTerritory(Stack<Field> territory) {
         this.territory = territory;
     }
 }
