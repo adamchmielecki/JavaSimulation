@@ -89,8 +89,8 @@ public class Map {
             }while(field[xCor][yCor].ownerID!=-1);
 
             countries.get(i).getTerritory().add(field[xCor][yCor]);
-            countries.get(i).ggg(field[xCor][yCor]);
-            countries.get(i).ppp(field[xCor][yCor]);
+            countries.get(i).summingCountryGold(field[xCor][yCor]);
+            countries.get(i).summmingCountryPopuation(field[xCor][yCor]);
             field[xCor][yCor].setOwnerID(i);
         }
     }
