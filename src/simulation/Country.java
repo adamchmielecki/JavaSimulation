@@ -36,6 +36,7 @@ public class Country {
     Random generator;
 
     public Country(int countryID, Army army) {
+        army=new Army(10,10,10);
         territory = new Stack<>();
         this.countryID = countryID;
         this.army = army;
@@ -72,9 +73,9 @@ public class Country {
 
     int attack() {
         int powerOfAttack;
-
         powerOfAttack = army.getAmountOfSoldiers()*army.soldier.getStrenghtOfAttack()+army.getAmountOfTanks()*army.tank.getStrenghtOfAttack()+army.getAmountOfJets()*army.jet.getStrenghtOfAttack();
         return powerOfAttack;
+
     }
 
     int defend() {

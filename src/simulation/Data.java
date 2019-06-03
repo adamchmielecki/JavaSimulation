@@ -39,7 +39,10 @@ public class Data {
         return mapSize;
     }
 
-    public static int getNumberOfIterations() {
+    //public static int getNumberOfIterations() {
+        //return numberOfIterations;
+    //}
+    public int getNumberOfIterations() {
         return numberOfIterations;
     }
 }
