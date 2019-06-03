@@ -7,7 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        try{
+       /*
+       try{
             BufferedReader input = new BufferedReader(new FileReader("InputData.txt"));
             Data.readInputData(input);
             input.close();
@@ -16,13 +17,20 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-        Data data = new Data(Data.getNumberOfCountries(),Data.getMapSize(),Data.getNumberOfIterations());
+
+
+        //Data data = new Data(Data.getNumberOfCountries(),Data.getMapSize(),Data.getNumberOfIterations());
+
+        */
+
+
 
         /*System.out.println(Data.getNumberOfCountries());
         System.out.println(Data.getMapSize());
         System.out.println(Data.getNumberOfIterations());*/
-
+        Data data = new Data(3,5,10);
         Map map = new Map(data);
+        map.settingID();
         map.generateResources(100,10);
         map.generateStartingPosition();
         map.printMap();
@@ -35,7 +43,7 @@ public class Main {
             country[i] = new Country(i,army[i]);
             //System.out.println("Country ID: "+country[i].getCountryID() + "  Soldiers: "+army[i].getAmountOfSoldiers()+"  Tanks: "+army[i].getAmountOfTanks()+"  Jets: "+army[i].getAmountOfJets());
         }
-        System.out.println("ssssssssss");
+
         for(int i=0; i<11; i++){
             map.takeNewField();
             System.out.println("aaaaaaaa");

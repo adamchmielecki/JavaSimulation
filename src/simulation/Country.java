@@ -70,11 +70,18 @@ public class Country {
 
 
 
-    void attack() {
+    int attack() {
+        int powerOfAttack;
 
+        powerOfAttack = army.getAmountOfSoldiers()*army.soldier.getStrenghtOfAttack()+army.getAmountOfTanks()*army.tank.getStrenghtOfAttack()+army.getAmountOfJets()*army.jet.getStrenghtOfAttack();
+        return powerOfAttack;
     }
 
-    void defend() {
+    int defend() {
+        int powerOfDefence;
+
+        powerOfDefence = army.getAmountOfSoldiers()*army.soldier.getStrenghtOfDefence()+army.getAmountOfTanks()*army.tank.getStrenghtOfDefence()+army.getAmountOfJets()*army.jet.getStrenghtOfDefence();
+        return powerOfDefence;
 
     }
 

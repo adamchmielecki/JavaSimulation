@@ -1,6 +1,6 @@
 package simulation;
 
-public class Army {
+public class Army extends Unit {
     public Army(int amountOfSoldiers, int amountOfTanks, int amountOfJets) {
         this.amountOfSoldiers = amountOfSoldiers;
         this.amountOfTanks = amountOfTanks;
@@ -8,7 +8,15 @@ public class Army {
         soldier = new Soldier();
         tank = new Tank();
         jet = new Jet();
+        soldier.setStrenghtOfAttack(20);
+        soldier.setStrenghtOfDefence(12);
+        tank.setStrenghtOfAttack(56);
+        tank.setStrenghtOfDefence(33);
+        jet.setStrenghtOfAttack(200);
+        jet.setStrenghtOfDefence(45);
     }
+
+
 
     private int amountOfSoldiers;
     private int amountOfTanks;
@@ -18,8 +26,9 @@ public class Army {
     Tank tank;
     Jet jet;
 
+
     private void updateArmy(){}
-    private void generateRandomArmy(){}
+    //private void generateRandomArmy(){}
 
     public int getAmountOfSoldiers() {
         return amountOfSoldiers;
