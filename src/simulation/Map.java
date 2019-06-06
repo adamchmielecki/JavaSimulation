@@ -11,6 +11,7 @@ public class Map {
         this.data = data;
         field = new Field[data.getMapSize()][data.getMapSize()];
         countries = new ArrayList<>();
+        generator = new Random();
 
         for(int i = 0; i<data.getNumberOfCountries(); i++){
             countries.add(new Country(i,new Army(1,1,1)));
@@ -21,7 +22,7 @@ public class Map {
     Data data;
     Field [][] field;
     ArrayList<Country> countries;
-    Random generator = new Random();
+    Random generator;
 
 
     private void generateGold(int max, int min){
@@ -40,15 +41,17 @@ public class Map {
         }
  */
     }
+
+
     public void settingID(){
         for(int i = 0; i<data.getMapSize(); i++){
             for(int j = 0; j<data.getMapSize(); j++)
             {
-                field[i][j] = new Field();
+                field[i][j] = new Field(1,1);
                 field[i][j].setFieldID(ID);
                 ID++;
                 // System.out.print(field[i][j].getOwnerID()+" ");
-            }System.out.println();
+            }
         }
     }
     private void generatePopulation(int max, int min){
@@ -86,7 +89,7 @@ public class Map {
             do{
                 xCor = generator.nextInt(data.getMapSize());
                 yCor = generator.nextInt(data.getMapSize());
-            }while(field[xCor][yCor].ownerID!=-1);
+            }while(field[xCor][yCor].getOwnerID()!=-1);
 
             countries.get(i).getTerritory().add(field[xCor][yCor]);
             countries.get(i).summingCountryGold(field[xCor][yCor]);

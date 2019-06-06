@@ -1,9 +1,23 @@
 package simulation;
 
-public class Field extends Resources{
+public class Field {
 
-    int ownerID;
-    int fieldID;
+    Plague plague;
+    Drought drought;
+    Tornado tornado;
+
+
+    private int gold;
+    private int population;
+    private int ownerID;
+    private int fieldID;
+
+    public Field(int gold, int silver) {
+        this.setGold(gold);
+        this.setPopulation(silver);
+        this.ownerID = -1;
+
+    }
 
     public int getFieldID() {
         return fieldID;
@@ -21,22 +35,20 @@ public class Field extends Resources{
         this.ownerID = ownerID;
     }
 
-    Tornado tornado = new Tornado();
-    Plague plague = new Plague();
-    Drought drought = new Drought();
-
-    public Field(int gold, int silver) {
-        this.setGold(gold);
-        this.setPopulation(silver);
-        this.ownerID = -1;
+    public int getGold() {
+        return gold;
     }
 
-    public Field() {
-        this.setGold(0);
-        this.setPopulation(0);
-        this.ownerID = -1;
+    public void setGold(int gold) {
+        this.gold = gold;
     }
 
+    public int getPopulation() {
+        return population;
+    }
 
+    public void setPopulation(int population) {
+        this.population = population;
+    }
 
 }

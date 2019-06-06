@@ -53,7 +53,7 @@ public class Country {
         this.getTerritory().add(field);
         totalGold+=field.getGold();
         field.setOwnerID(this.getCountryID());
-        System.out.println(totalGold);
+       // System.out.println(totalGold);
 
     }
 
@@ -62,7 +62,7 @@ public class Country {
         this.getTerritory().add(field);
         totalPopulation+=field.getPopulation();
         field.setOwnerID(this.getCountryID());
-        System.out.println(totalPopulation);
+        //System.out.println(totalPopulation);
         //return  totalGold;
     }
 
