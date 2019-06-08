@@ -25,7 +25,7 @@ public class Main {
         System.out.println(Data.getNumberOfCountries());
         System.out.println(Data.getMapSize());
         System.out.println(Data.getNumberOfIterations());
-        Data data = new Data(3,5,5);
+        Data data = new Data(16,5,30);
         Map map = new Map(data);
         map.settingID();
         map.generateResources(100,10);
@@ -41,11 +41,20 @@ public class Main {
 
 
 
-
         for(int i=0; i<data.getNumberOfIterations(); i++){
+            System.out.println("AAAAAA" + i);
+            map.generateResources(100,100);
             map.takeNewField();
             System.out.println();
-            map.printMap();
+            System.out.println("ITERACJA"+ i );
+            map.countries.get(0).summingCountryGold();
+            map.countries.get(0).summingCountryPopuation();
+
+            System.out.println(map.countries.get(0).getTotalGold());
+
+
+
+
         }
 
     }

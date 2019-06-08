@@ -1,14 +1,12 @@
 package simulation;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Stack;
 
 public class Country {
 
     private int countryID;
-
+    Map map;
 
 
     public int getTotalPopulation() {
@@ -32,7 +30,7 @@ public class Country {
 
 
     private Stack<Field> territory;
-    Army army;
+    public Army army;
     Random generator;
 
     public Country(int countryID, Army army) {
@@ -48,23 +46,23 @@ public class Country {
 
     }
 
-    void summingCountryGold(Field field){
-
-        this.getTerritory().add(field);
-        totalGold+=field.getGold();
-        field.setOwnerID(this.getCountryID());
-       // System.out.println(totalGold);
-
+    public int summingCountryGold(){
+        totalGold=0;
+        for(int i=0; i<territory.size(); i++){
+            totalGold+=territory.get(i).getGold();
+        }
+        return totalGold;
     }
 
-    void summmingCountryPopuation(Field field){
-
-        this.getTerritory().add(field);
-        totalPopulation+=field.getPopulation();
-        field.setOwnerID(this.getCountryID());
-        //System.out.println(totalPopulation);
-        //return  totalGold;
+    public int  summingCountryPopuation(){
+        totalPopulation=0;
+        for(int i=0; i<territory.size(); i++){
+            totalPopulation+=territory.get(i).getGold();
+        }
+        return totalPopulation;
     }
+
+
 
 
 

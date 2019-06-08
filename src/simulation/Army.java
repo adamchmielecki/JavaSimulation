@@ -27,7 +27,9 @@ public class Army{
     Jet jet;
 
 
-    private void updateArmy(){}
+    private void updateArmy(){
+
+    }
 
     public int getAmountOfSoldiers() {
         return amountOfSoldiers;
