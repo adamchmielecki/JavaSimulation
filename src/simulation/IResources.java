@@ -1,6 +1,6 @@
 package simulation;
 
-public interface IReduction {
+public interface IResources {
     int percentReduction=0;
 
     void reduce();

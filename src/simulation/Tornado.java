@@ -1,6 +1,6 @@
 package simulation;
 
-public class Tornado implements IReduction {
+public class Tornado implements IResources {
 
 
     @Override

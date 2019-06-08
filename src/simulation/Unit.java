@@ -4,24 +4,23 @@ import java.util.Random;
 
 public abstract class Unit {
 
-    /*private static int strenghtOfAttack;
-    private static int strenghtOfDefence;*/
-    int bonus;
-    Random bonusGenerator;
+    protected int count;
+    public static int strenghtOfAttack;
+    public static int strenghtOfDefence;
+    public static int staff;
+    public static int cost;
+    /*int bonus;
+    Random bonusGenerator;*/
 
-    /*public static int getStrenghtOfAttack() {
-        return strenghtOfAttack;
+    public Unit(int count){
+        this.count = count;
     }
 
-    public void setStrenghtOfAttack(int strenghtOfAttack) {
-        this.strenghtOfAttack = strenghtOfAttack;
+    public int getCount() {
+        return count;
     }
 
-    public static int getStrenghtOfDefence() {
-        return strenghtOfDefence;
+    public void setCount(int count) {
+        this.count = count;
     }
-
-    public void setStrenghtOfDefence(int strenghtOfDefence) {
-        this.strenghtOfDefence = strenghtOfDefence;
-    }*/
 }
