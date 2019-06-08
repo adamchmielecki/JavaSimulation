@@ -42,18 +42,15 @@ public class Main {
 
 
         for(int i=0; i<data.getNumberOfIterations(); i++){
-            System.out.println("AAAAAA" + i);
-            map.generateResources(100,100);
-            map.takeNewField();
-            System.out.println();
-            System.out.println("ITERACJA"+ i );
-            map.countries.get(0).summingCountryGold();
-            map.countries.get(0).summingCountryPopuation();
-
-            System.out.println(map.countries.get(0).getTotalGold());
-
-
-
+                System.out.println("AAAAAA" + i);
+                map.generateResources(100,100);
+                map.takeNewField();
+                System.out.println();
+                System.out.println("ITERACJA" + i);
+                map.countries.get(0).summingCountryGold();
+                map.countries.get(0).summingCountryPopuation();
+                map.countries.get(0).army.updateArmy();
+                System.out.println(map.countries.get(0).getTotalGold());
 
         }
 

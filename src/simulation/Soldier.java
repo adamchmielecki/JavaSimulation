@@ -2,7 +2,13 @@ package simulation;
 
 import java.util.Random;
 
-public class Soldier extends Unit {
+public abstract class Soldier extends Unit {
+
+    public static final int strenghtOfAttack = 5;
+    public static final int strenghtOfDefence = 2;
+    public static final int staff = 10;
+    public static final int cost = 10;
+
 
 
     public void superMethod(Country country1, Country country2, Field field){
@@ -13,4 +19,6 @@ public class Soldier extends Unit {
             }
         }
     }
+
+
 }

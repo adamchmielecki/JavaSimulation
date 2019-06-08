@@ -1,11 +1,13 @@
 package simulation;
 
-public class Army{
+import java.util.Random;
+
+public class Army {
     public Army(int amountOfSoldiers, int amountOfTanks, int amountOfJets) {
         this.amountOfSoldiers = amountOfSoldiers;
         this.amountOfTanks = amountOfTanks;
         this.amountOfJets = amountOfJets;
-        soldier = new Soldier();
+        /*soldier = new Soldier();
         tank = new Tank();
         jet = new Jet();
         soldier.setStrenghtOfAttack(20);
@@ -13,22 +15,50 @@ public class Army{
         tank.setStrenghtOfAttack(56);
         tank.setStrenghtOfDefence(33);
         jet.setStrenghtOfAttack(200);
-        jet.setStrenghtOfDefence(45);
+        jet.setStrenghtOfDefence(45);*/
     }
-
 
 
     private int amountOfSoldiers;
     private int amountOfTanks;
     private int amountOfJets;
 
-    Soldier soldier;
+    /*Soldier soldier;
     Tank tank;
-    Jet jet;
+    Jet jet;*/
 
+    public void generateRandomArmy() {
+    }
 
-    private void updateArmy(){
-
+    public void updateArmy() {
+        int a;
+        Random generator = new Random();
+        a = generator.nextInt(3);
+        if (a == 0) {
+            for (; Country.getTotalGold() > Soldier.cost; ) {
+                for (; Country.getTotalPopulation() > Soldier.staff; ) {
+                    amountOfSoldiers++;
+                    Country.setTotalGold(Country.getTotalGold() - Soldier.cost);
+                    Country.setTotalPopulation(Country.getTotalPopulation() - Soldier.staff);
+                }
+            }
+        } else if (a == 1) {
+            for (; Country.getTotalGold() > Tank.cost; ) {
+                for (; Country.getTotalPopulation() > Tank.staff; ) {
+                    amountOfTanks++;
+                    Country.setTotalGold(Country.getTotalGold() - Tank.cost);
+                    Country.setTotalPopulation(Country.getTotalPopulation() - Tank.staff);
+                }
+            }
+        } else if (a == 2) {
+            for (; Country.getTotalGold() > Jet.cost; ) {
+                for (; Country.getTotalPopulation() > Jet.staff; ) {
+                    amountOfJets++;
+                    Country.setTotalGold(Country.getTotalGold() - Jet.cost);
+                    Country.setTotalPopulation(Country.getTotalPopulation() - Jet.staff);
+                }
+            }
+        }
     }
 
     public int getAmountOfSoldiers() {
@@ -54,4 +84,5 @@ public class Army{
     public void setAmountOfJets(int amountOfJets) {
         this.amountOfJets = amountOfJets;
     }
+
 }

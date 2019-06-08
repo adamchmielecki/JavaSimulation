@@ -8,25 +8,24 @@ public class Country {
     private int countryID;
     Map map;
 
-
-    public int getTotalPopulation() {
+    public static int getTotalPopulation() {
         return totalPopulation;
     }
 
-    public void setTotalPopulation(int totalPopulation) {
-        this.totalPopulation = totalPopulation;
+    public static void setTotalPopulation(int totalPopulation) {
+        Country.totalPopulation = totalPopulation;
     }
 
-    public int getTotalGold() {
+    public static int getTotalGold() {
         return totalGold;
     }
 
-    public void setTotalGold(int totalGold) {
-        this.totalGold = totalGold;
+    public static void setTotalGold(int totalGold) {
+        Country.totalGold = totalGold;
     }
 
-    private int totalGold;
-    private int totalPopulation;
+    private static int totalGold;
+    private static int totalPopulation;
 
 
     private Stack<Field> territory;
@@ -64,14 +63,9 @@ public class Country {
 
 
 
-
-
-
-
-
     int attack() {
         int powerOfAttack;
-        powerOfAttack = army.getAmountOfSoldiers()*army.soldier.getStrenghtOfAttack()+army.getAmountOfTanks()*army.tank.getStrenghtOfAttack()+army.getAmountOfJets()*army.jet.getStrenghtOfAttack();
+        powerOfAttack = army.getAmountOfSoldiers()*Soldier.strenghtOfAttack+army.getAmountOfTanks()*Tank.strenghtOfAttack+army.getAmountOfJets()*Jet.strenghtOfAttack;
         return powerOfAttack;
 
     }
@@ -79,7 +73,7 @@ public class Country {
     int defend() {
         int powerOfDefence;
 
-        powerOfDefence = army.getAmountOfSoldiers()*army.soldier.getStrenghtOfDefence()+army.getAmountOfTanks()*army.tank.getStrenghtOfDefence()+army.getAmountOfJets()*army.jet.getStrenghtOfDefence();
+        powerOfDefence = army.getAmountOfSoldiers()*Soldier.strenghtOfDefence+army.getAmountOfTanks()*Tank.strenghtOfDefence+army.getAmountOfJets()*Jet.strenghtOfDefence;
         return powerOfDefence;
 
     }

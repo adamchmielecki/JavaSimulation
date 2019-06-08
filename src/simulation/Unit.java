@@ -4,12 +4,12 @@ import java.util.Random;
 
 public abstract class Unit {
 
-    private int strenghtOfAttack;
-    private int strenghtOfDefence;
+    /*private static int strenghtOfAttack;
+    private static int strenghtOfDefence;*/
     int bonus;
     Random bonusGenerator;
 
-    public int getStrenghtOfAttack() {
+    /*public static int getStrenghtOfAttack() {
         return strenghtOfAttack;
     }
 
@@ -17,11 +17,11 @@ public abstract class Unit {
         this.strenghtOfAttack = strenghtOfAttack;
     }
 
-    public int getStrenghtOfDefence() {
+    public static int getStrenghtOfDefence() {
         return strenghtOfDefence;
     }
 
     public void setStrenghtOfDefence(int strenghtOfDefence) {
         this.strenghtOfDefence = strenghtOfDefence;
-    }
+    }*/
 }
