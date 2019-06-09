@@ -5,10 +5,10 @@ import java.util.Random;
 public abstract class Unit {
 
     protected int count;
-    public static int strenghtOfAttack;
-    public static int strenghtOfDefence;
-    public static int staff;
-    public static int cost;
+    public int strenghtOfAttack;
+    public int strenghtOfDefence;
+    public int staff;
+    public int cost;
     /*int bonus;
     Random bonusGenerator;*/
 
