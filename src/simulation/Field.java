@@ -16,8 +16,8 @@ public class Field {
 
     public Field() {
         generator = new Random();
-        gold = new Gold(generator.nextInt(100));
-        population = new Population(generator.nextInt(100));
+        gold = new Gold(generator.nextInt(200));
+        population = new Population(generator.nextInt(200));
 
         this.ownerID = -1;
 

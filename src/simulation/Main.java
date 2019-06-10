@@ -40,7 +40,6 @@ public class Main {
         }
 
 
-
         for(int i=0; i<data.getNumberOfIterations(); i++){
 
                 System.out.println("AAAAA");

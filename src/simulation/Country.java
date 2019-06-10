@@ -67,14 +67,12 @@ public class Country {
         int powerOfAttack;
         powerOfAttack = army.soldier.getCount()*army.soldier.strenghtOfAttack+army.tank.getCount()*army.tank.strenghtOfAttack+army.jet.getCount()*army.jet.strenghtOfAttack;
         return powerOfAttack;
-
     }
 
     int defend() {
         int powerOfDefence;
         powerOfDefence = army.soldier.getCount()*army.soldier.strenghtOfDefence+army.tank.getCount()*army.tank.strenghtOfDefence+army.jet.getCount()*army.jet.strenghtOfDefence;
         return powerOfDefence;
-
     }
 
     public int getCountryID() {

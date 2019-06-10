@@ -24,7 +24,10 @@ public class Army {
     Tank tank;
     Jet jet;
 
-    public void generateRandomArmy() {
+    public void reduceArmy() {
+       soldier.setCount(soldier.getCount()/2);
+       tank.setCount(tank.getCount()/2);
+       jet.setCount(jet.getCount()/2);
     }
 
     public void updateArmy(Country country) {
@@ -57,30 +60,4 @@ public class Army {
             country.setTotalPopulation(country.getTotalPopulation() - soldier.staff);
         }
     }
-
-    /*
-public int getAmountOfSoldiers() {
-        return amountOfSoldiers;
-    }
-
-    public void setAmountOfSoldiers(int amountOfSoldiers) {
-        this.amountOfSoldiers = amountOfSoldiers;
-    }
-
-    public int getAmountOfTanks() {
-        return amountOfTanks;
-    }
-
-    public void setAmountOfTanks(int amountOfTanks) {
-        this.amountOfTanks = amountOfTanks;
-    }
-
-    public int getAmountOfJets() {
-        return amountOfJets;
-    }
-
-    public void setAmountOfJets(int amountOfJets) {
-        this.amountOfJets = amountOfJets;
-    }
-*/
 }
