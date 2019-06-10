@@ -12,6 +12,11 @@ public class Tank extends Unit {
         cost = 25;
     }
 
+    public void createNewTank(Country country){
+        setCount(getCount() + 1);
+        country.setTotalGold(country.getTotalGold() - cost);
+        country.setTotalPopulation(country.getTotalPopulation() - staff);
+    }
     /*public void superMethod(Country country1, Country country2, Field field){
         bonus=bonusGenerator.nextInt(100);
         if(country1.army.getAmountOfTanks()>=country2.army.getAmountOfTanks()){

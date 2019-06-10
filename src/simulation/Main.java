@@ -49,7 +49,7 @@ public class Main {
                 System.out.println("ITERACJA" + i);
                 map.countries.get(0).summingCountryGold();
                 map.countries.get(0).summingCountryPopuation();
-                map.countries.get(0).army.updateArmy();
+                map.countries.get(0).army.updateArmy(map.countries.get(0));
                 System.out.println(map.countries.get(0).getTotalGold());
 
         }

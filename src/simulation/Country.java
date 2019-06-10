@@ -8,19 +8,19 @@ public class Country {
     private int countryID;
     Map map;
 
-    public static int getTotalPopulation() {
+    public int getTotalPopulation() {
         return totalPopulation;
     }
 
-    public static void setTotalPopulation(int totalPopulation) {
+    public void setTotalPopulation(int totalPopulation) {
         Country.totalPopulation = totalPopulation;
     }
 
-    public static int getTotalGold() {
+    public int getTotalGold() {
         return totalGold;
     }
 
-    public static void setTotalGold(int totalGold) {
+    public void setTotalGold(int totalGold) {
         Country.totalGold = totalGold;
     }
 

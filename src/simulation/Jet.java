@@ -10,6 +10,11 @@ public class Jet extends Unit {
         cost = 50;
     }
 
+    public void createNewJet(Country country){
+        setCount(getCount() + 1);
+        country.setTotalGold(country.getTotalGold() - cost);
+        country.setTotalPopulation(country.getTotalPopulation() - staff);
+    }
     /*public void superMethod(Country country1, Country country2, Field field){
         bonus=bonusGenerator.nextInt(100);
         if(country1.army.getAmountOfJets()>=country2.army.getAmountOfJets()) {
