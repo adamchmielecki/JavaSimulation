@@ -16,6 +16,12 @@ public abstract class Unit {
         this.count = count;
     }
 
+    public void createNewUnit(Country country){
+        setCount(getCount()+1);
+        country.setTotalGold(country.getTotalGold() - cost);
+        country.setTotalPopulation(country.getTotalPopulation() - staff);
+    }
+
     public int getCount() {
         return count;
     }
