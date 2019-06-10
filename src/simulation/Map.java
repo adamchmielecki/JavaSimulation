@@ -98,6 +98,7 @@ public class Map {
             field[xCor][yCor].setOwnerID(i);
         }
     }
+
     public void takeNewField(){
         int [][] ownerTable = new int[data.getMapSize()][data.getMapSize()];
 

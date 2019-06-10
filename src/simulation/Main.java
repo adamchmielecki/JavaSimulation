@@ -52,9 +52,9 @@ public class Main {
                 System.out.println("złoto "+map.countries.get(0).getTotalGold());
 
                 System.out.println("population "+map.countries.get(0).getTotalPopulation());
-                //System.out.println("Iteracja: " +i+ "Liczba żołnierzy: "+ map.countries.get(0).army.getAmountOfSoldiers());
-                //System.out.println("Iteracja: " +i+ "Liczba czołgów: "+ map.countries.get(0).army.getAmountOfTanks());
-                //System.out.println("Iteracja: " +i+ "Liczba somolotów: "+ map.countries.get(0).army.getAmountOfJets());
+                System.out.println("Iteracja: " +i+ "Liczba żołnierzy: "+ map.countries.get(0).army.soldier.getCount());
+                System.out.println("Iteracja: " +i+ "Liczba czołgów: "+ map.countries.get(0).army.tank.getCount());
+                System.out.println("Iteracja: " +i+ "Liczba somolotów: "+ map.countries.get(0).army.jet.getCount());
 
         }
 
