@@ -9,8 +9,8 @@ public abstract class Unit {
     public int strenghtOfDefence;
     public int staff;
     public int cost;
-    /*int bonus;
-    Random bonusGenerator;*/
+    int bonus;
+    Random bonusGenerator;
 
     public Unit(int count){
         this.count = count;

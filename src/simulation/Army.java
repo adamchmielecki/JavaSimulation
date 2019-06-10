@@ -10,15 +10,8 @@ public class Army {
         soldier.setCount(amountOfSoldiers);
         tank.setCount(amountOfTanks);
         jet.setCount(amountOfJets);
-        /*this.amountOfSoldiers = amountOfSoldiers;
-        this.amountOfTanks = amountOfTanks;
-        this.amountOfJets = amountOfJets;*/
-
     }
 
-    /*private int amountOfSoldiers;
-    private int amountOfTanks;
-    private int amountOfJets;*/
 
     Soldier soldier;
     Tank tank;
@@ -37,31 +30,16 @@ public class Army {
                 a = generator.nextInt(3);
                 if (a == 0) {
                     soldier.createNewUnit(country);
-                    //soldier.createNewSoldier(country);
-                            /*soldier.setCount(soldier.getCount() + 1);
-                            Country.setTotalGold(Country.getTotalGold() - soldier.cost);
-                            Country.setTotalPopulation(Country.getTotalPopulation() - soldier.staff);*/
                 }
                 else if (a == 1) {
                     tank.createNewUnit(country);
-                    //tank.createNewTank(country);
-                            /*tank.setCount(tank.getCount() + 1);
-                            Country.setTotalGold(Country.getTotalGold() - tank.cost);
-                            Country.setTotalPopulation(Country.getTotalPopulation() - tank.staff);*/
                 }
                 else if (a == 2) {
                     jet.createNewUnit(country);
-                    //jet.createNewJet(country);
-                    /*jet.setCount(jet.getCount() + 1);
-                    Country.setTotalGold(Country.getTotalGold() - jet.cost);
-                    Country.setTotalPopulation(Country.getTotalPopulation() - jet.staff);*/
                 }
         }
         while (country.getTotalGold() >= soldier.cost && country.getTotalPopulation() >= soldier.staff) {
             soldier.createNewUnit(country);
-            /*soldier.setCount(soldier.getCount() + 1);
-            country.setTotalGold(country.getTotalGold() - soldier.cost);
-            country.setTotalPopulation(country.getTotalPopulation() - soldier.staff);*/
         }
     }
 }

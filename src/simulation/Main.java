@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
- /*      try{
+       try{
             BufferedReader input = new BufferedReader(new FileReader("InputData.txt"));
             Data.readInputData(input);
             input.close();
@@ -18,19 +18,24 @@ public class Main {
 
 
 
-        Data data = new Data(Data.getNumberOfCountries(),Data.getMapSize(),Data.getNumberOfIterations());*/
+        Data data = new Data(Data.getNumberOfCountries(),Data.getMapSize(),Data.getNumberOfIterations());
 
-
-
-        System.out.println(Data.getNumberOfCountries());
-        System.out.println(Data.getMapSize());
-        System.out.println(Data.getNumberOfIterations());
-        Data data = new Data(4,5,30);
         Map map = new Map(data);
         map.settingID();
         map.generateResources(100,10);
         map.generateStartingPosition();
         map.printMap();
+
+
+        System.out.println("AAAAAAAAAAAAAA");
+        System.out.println(map.countries.get(0).army.tank.getCount());
+        map.countries.get(0).army.tank.createNewUnit(map.countries.get(0));
+        map.countries.get(0).army.tank.createNewUnit(map.countries.get(0));
+        map.countries.get(0).army.tank.createNewUnit(map.countries.get(0));
+        System.out.println(map.countries.get(0).army.tank.getCount());
+        System.out.println("AAAAAAAAAAAAAA");
+
+
 
         Random random = new Random();
         Country[] country = new Country[data.getMapSize()];
@@ -41,20 +46,13 @@ public class Main {
 
 
         for(int i=0; i<data.getNumberOfIterations(); i++){
-
-                System.out.println("AAAAA");
                 map.generateResources(100,100);
                 map.takeNewField();
-                map.printMap();
-                map.countries.get(0).summingCountryGold();
-                map.countries.get(0).summingCountryPopuation();
-                map.countries.get(0).army.updateArmy(map.countries.get(0));
-                System.out.println("złoto "+map.countries.get(0).getTotalGold());
-
-                System.out.println("population "+map.countries.get(0).getTotalPopulation());
-                System.out.println("Iteracja: " +i+ "Liczba żołnierzy: "+ map.countries.get(0).army.soldier.getCount());
-                System.out.println("Iteracja: " +i+ "Liczba czołgów: "+ map.countries.get(0).army.tank.getCount());
-                System.out.println("Iteracja: " +i+ "Liczba somolotów: "+ map.countries.get(0).army.jet.getCount());
+                for(int j=0; j<data.getNumberOfCountries(); j++){
+                    map.countries.get(j).summingCountryGold();
+                    map.countries.get(j).summingCountryPopuation();
+                    map.countries.get(j).army.updateArmy(map.countries.get(j));
+                }
 
         }
 

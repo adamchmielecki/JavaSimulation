@@ -41,7 +41,4 @@ public class Data {
     public static int getNumberOfIterations() {
         return numberOfIterations;
     }
-    //public int getNumberOfIterations() {
-        //return numberOfIterations;
-    //}
 }

@@ -43,13 +43,13 @@ public class Map {
 
             }
         }
-        System.out.println("goooold");
+       /* System.out.println("goooold");
         for(int i = 0; i<data.getMapSize(); i++){
             for(int j = 0; j<data.getMapSize(); j++) {
                System.out.print(field[i][j].gold.getAmount()+" ");
             }System.out.println();
         }
-
+*/
     }
 
 
@@ -61,12 +61,14 @@ public class Map {
                 field[i][j].population.setAmount(generator.nextInt(max)+min);
             }
         }
+/*
         System.out.println("pooopulation");
         for(int i = 0; i<data.getMapSize(); i++){
             for(int j = 0; j<data.getMapSize(); j++) {
                 System.out.print(field[i][j].population.getAmount()+" ");
             }System.out.println();
         }
+*/
 
     }
     public void generateResources(int max, int min){
@@ -156,8 +158,6 @@ public class Map {
                                     if (x == 2&&field[j][k-1].getOwnerID()!=i) {
                                         if (field[j][k-1].getOwnerID()!=-1) {
                                             if(countries.get(i).attack()>countries.get(field[j][k-1].getOwnerID()).defend()){
-                                                if(field[j-1][k]==null) System.out.println("field sie zyebao");
-                                                if(countries==null) System.out.println("counties sie zyebao");
                                                 countries.get(field[j][k - 1].getOwnerID()).army.reduceArmy();
                                                 countries.get(field[j][k-1].getOwnerID()).getTerritory().pop();
                                                 field[j][k-1].setOwnerID(i);

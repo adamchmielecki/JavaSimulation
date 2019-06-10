@@ -1,7 +1,8 @@
 package simulation;
 
 public  class Gold implements IResources {
-private  int amount;
+
+    private  int amount;
 
     public Gold(int amount) {
         this.amount = amount;

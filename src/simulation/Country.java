@@ -30,14 +30,13 @@ public class Country {
 
     private Stack<Field> territory;
     public Army army;
-    Random generator;
 
     public Country(int countryID, Army army) {
         army=new Army(10,10,10);
         territory = new Stack<>();
         this.countryID = countryID;
         this.army = army;
-        this.generator = generator;
+
 
         totalGold=0;
         totalPopulation=0;
@@ -83,21 +82,6 @@ public class Country {
         this.countryID = countryID;
     }
 
-    public Army getArmy() {
-        return army;
-    }
-
-    public void setArmy(Army army) {
-        this.army = army;
-    }
-
-    public Random getGenerator() {
-        return generator;
-    }
-
-    public void setGenerator(Random generator) {
-        this.generator = generator;
-    }
 
     public Stack<Field> getTerritory() {
         return territory;
