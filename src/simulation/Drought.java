@@ -1,10 +1,6 @@
 package simulation;
 
-public class Drought implements IResources {
+public class Drought  {
 
-    @Override
-    public void reduce() {
-
-    }
 
 }

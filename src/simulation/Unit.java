@@ -23,4 +23,5 @@ public abstract class Unit {
     public void setCount(int count) {
         this.count = count;
     }
+
 }
