@@ -27,31 +27,31 @@ public class Army {
     public void generateRandomArmy() {
     }
 
-    public void updateArmy() {
-        while(Country.getTotalGold() >= jet.cost && Country.getTotalPopulation() >= tank.staff) {
+    public void updateArmy(Country country) {
+        while(country.getTotalGold() >= jet.cost && country.getTotalPopulation() >= tank.staff) {
             int a;
             Random generator = new Random();
             a = generator.nextInt(3);
             if (a == 0) {
                 soldier.setCount(soldier.getCount() + 1);
-                Country.setTotalGold(Country.getTotalGold() - soldier.cost);
-                Country.setTotalPopulation(Country.getTotalPopulation() - soldier.staff);
+                country.setTotalGold(country.getTotalGold() - soldier.cost);
+                country.setTotalPopulation(country.getTotalPopulation() - soldier.staff);
             }
             else if (a == 1) {
                 tank.setCount(tank.getCount() + 1);
-                Country.setTotalGold(Country.getTotalGold() - tank.cost);
-                Country.setTotalPopulation(Country.getTotalPopulation() - tank.staff);
+                country.setTotalGold(country.getTotalGold() - tank.cost);
+                country.setTotalPopulation(country.getTotalPopulation() - tank.staff);
             }
             else if (a == 2) {
                 jet.setCount(jet.getCount() + 1);
-                Country.setTotalGold(Country.getTotalGold() - jet.cost);
-                Country.setTotalPopulation(Country.getTotalPopulation() - jet.staff);
+                country.setTotalGold(country.getTotalGold() - jet.cost);
+                country.setTotalPopulation(country.getTotalPopulation() - jet.staff);
             }
         }
-        while (Country.getTotalGold() >= soldier.cost && Country.getTotalPopulation() >= soldier.staff) {
+        while (country.getTotalGold() >= soldier.cost && country.getTotalPopulation() >= soldier.staff) {
             soldier.setCount(soldier.getCount() + 1);
-            Country.setTotalGold(Country.getTotalGold() - soldier.cost);
-            Country.setTotalPopulation(Country.getTotalPopulation() - soldier.staff);
+            country.setTotalGold(country.getTotalGold() - soldier.cost);
+            country.setTotalPopulation(country.getTotalPopulation() - soldier.staff);
         }
     }
 

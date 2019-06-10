@@ -4,28 +4,24 @@ import java.util.Random;
 
 public class Field {
 
-    Plague plague;
-    Drought drought;
-    Tornado tornado;
-    Data data;
 
-
-    private int gold;
-    private int population;
+    Gold gold;
+    Population population;
     private int ownerID;
     private int fieldID;
-    private Random generator;
+    Random generator;
 
-    public Field(int gold, int population) {
-        this.setGold(gold);
-        this.setPopulation(population);
+
+
+
+    public Field() {
+        generator = new Random();
+        gold = new Gold(generator.nextInt(100));
+        population = new Population(generator.nextInt(100));
+
         this.ownerID = -1;
 
-        generator = new Random();
-
     }
-
-
 
     public int getFieldID() {
         return fieldID;
@@ -43,17 +39,7 @@ public class Field {
         this.ownerID = ownerID;
     }
 
-    public int getGold() {
-        return gold;
-    }
 
-    public void setGold(int gold) {
-        this.gold = gold;
-    }
-
-    public int getPopulation() { return population; }
-
-    public void setPopulation(int population) { this.population = population; }
 
 
 }

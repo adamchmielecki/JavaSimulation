@@ -8,24 +8,24 @@ public class Country {
     private int countryID;
     Map map;
 
-    public static int getTotalPopulation() {
+    public int getTotalPopulation() {
         return totalPopulation;
     }
 
-    public static void setTotalPopulation(int totalPopulation) {
-        Country.totalPopulation = totalPopulation;
+    public void setTotalPopulation(int totalPopulation) {
+        this.totalPopulation = totalPopulation;
     }
 
-    public static int getTotalGold() {
+    public int getTotalGold() {
         return totalGold;
     }
 
-    public static void setTotalGold(int totalGold) {
-        Country.totalGold = totalGold;
+    public void setTotalGold(int totalGold) {
+        this.totalGold = totalGold;
     }
 
-    private static int totalGold;
-    private static int totalPopulation;
+    private int totalGold;
+    private int totalPopulation;
 
 
     private Stack<Field> territory;
@@ -48,7 +48,7 @@ public class Country {
     public int summingCountryGold(){
         totalGold=0;
         for(int i=0; i<territory.size(); i++){
-            totalGold+=territory.get(i).getGold();
+            totalGold+=territory.get(i).gold.getAmount();
         }
         return totalGold;
     }
@@ -56,7 +56,7 @@ public class Country {
     public int  summingCountryPopuation(){
         totalPopulation=0;
         for(int i=0; i<territory.size(); i++){
-            totalPopulation+=territory.get(i).getGold();
+            totalPopulation+=territory.get(i).gold.getAmount();
         }
         return totalPopulation;
     }

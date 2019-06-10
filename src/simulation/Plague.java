@@ -1,9 +1,6 @@
 package simulation;
 
-public class Plague implements IResources {
+public class Plague {
 
-    @Override
-    public void reduce() {
 
-    }
 }

@@ -49,11 +49,13 @@ public class Main {
                 map.printMap();
                 map.countries.get(0).summingCountryGold();
                 map.countries.get(0).summingCountryPopuation();
-                map.countries.get(0).army.updateArmy();
-                System.out.println(map.countries.get(0).getTotalGold());
-                System.out.println("Iteracja: " +i+ "Liczba żołnierzy: "+ map.countries.get(0).army.getAmountOfSoldiers());
-                System.out.println("Iteracja: " +i+ "Liczba czołgów: "+ map.countries.get(0).army.getAmountOfTanks());
-                System.out.println("Iteracja: " +i+ "Liczba somolotów: "+ map.countries.get(0).army.getAmountOfJets());
+                map.countries.get(0).army.updateArmy(map.countries.get(0));
+                System.out.println("złoto "+map.countries.get(0).getTotalGold());
+
+                System.out.println("population "+map.countries.get(0).getTotalPopulation());
+                //System.out.println("Iteracja: " +i+ "Liczba żołnierzy: "+ map.countries.get(0).army.getAmountOfSoldiers());
+                //System.out.println("Iteracja: " +i+ "Liczba czołgów: "+ map.countries.get(0).army.getAmountOfTanks());
+                //System.out.println("Iteracja: " +i+ "Liczba somolotów: "+ map.countries.get(0).army.getAmountOfJets());
 
         }
 
