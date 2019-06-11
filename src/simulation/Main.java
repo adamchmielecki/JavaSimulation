@@ -27,34 +27,19 @@ public class Main {
         map.printMap();
 
 
-        System.out.println("AAAAAAAAAAAAAA");
-        System.out.println(map.countries.get(0).army.tank.getCount());
-        map.countries.get(0).army.tank.createNewUnit(map.countries.get(0));
-        map.countries.get(0).army.tank.createNewUnit(map.countries.get(0));
-        map.countries.get(0).army.tank.createNewUnit(map.countries.get(0));
-        System.out.println(map.countries.get(0).army.tank.getCount());
-        System.out.println("AAAAAAAAAAAAAA");
-
-
-
-        Random random = new Random();
-        Country[] country = new Country[data.getMapSize()];
-        Army[] army = new Army[data.getMapSize()];
-        for(int i=0; i<data.getNumberOfCountries(); i++){
-            map.countries.get(i).army = new Army(random.nextInt(100),random.nextInt(100),random.nextInt(100));
-        }
-
-
         for(int i=0; i<data.getNumberOfIterations(); i++){
-                map.generateResources(100,100);
-                map.takeNewField();
-                for(int j=0; j<data.getNumberOfCountries(); j++){
-                    map.countries.get(j).summingCountryGold();
-                    map.countries.get(j).summingCountryPopuation();
-                    map.countries.get(j).army.updateArmy(map.countries.get(j));
-                }
+            map.generateResources(100,100);
+            map.takeNewField();
+            for(int j=0; j<data.getNumberOfCountries(); j++){
+                map.countries.get(j).summingCountryGold();
+                map.countries.get(j).summingCountryPopuation();
+                map.countries.get(j).army.updateArmy(map.countries.get(j));
+            }
 
         }
+        System.out.println();
+        System.out.println("Map after the simulation:");
+        map.printMap();
 
     }
 }

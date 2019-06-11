@@ -2,7 +2,7 @@ package simulation;
 
 import java.util.Random;
 
-public abstract class Unit {
+public abstract class Unit implements IUnit {
 
     protected int count;
     public int strenghtOfAttack;
