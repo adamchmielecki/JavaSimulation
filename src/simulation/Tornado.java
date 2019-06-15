@@ -1,6 +1,4 @@
 package simulation;
 
-public class Tornado{
-
-
+public class Tornado {
 }

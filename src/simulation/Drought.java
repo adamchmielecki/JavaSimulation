@@ -1,6 +1,4 @@
 package simulation;
 
-public class Drought  {
-
-
+public class Drought {
 }
